@@ -1,0 +1,13 @@
+local Players = game:service('Players')
+local Player = Players.LocalPlayer
+local UIS = game:GetService("UserInputService")
+
+
+UIS.InputBegan:Connect(function(Input,Proccesion)
+  if Input.KeyCode == Enum.KeyCode.P and not Proccesion then
+   while true do
+       wait(0.01)
+      game.Players.LocalPlayer.SpeedBuff.Value = 9.5
+      end
+  end
+end)
